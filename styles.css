@@ -1,12 +1,20 @@
+body{
+    background-color: #4d4d4d;
+}
+
 main{
     font-family: 'Roboto', sans-serif;
+    display: flex;
     position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
 }
 
 .circle{
     border-radius: 50%;
-    width: 120px;
-    height: 120px;
+    width: 360px;
+    height: 360px;
     border: 1px solid #fff;
     color: #fff;
     margin: 50px auto;
@@ -21,41 +29,36 @@ main{
     border-radius: 50%;
     z-index: -1;
     position: absolute;
-    width: 160px;
-    height: 160px;
-    left: calc(50% -80px);
-    top: calc(50% - 80px);
+    width: 480px;
+    height: 480px;
+    left: calc(50% - 240px);
+    top: calc(50% - 240px);
     background-color: #1d1d1d;
 }
 
 .second-circle{
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background-color: #fff;
     position: absolute;
-    left: calc(50% - 10px);
-    top: calc(50% - 10px);
+    left: calc(50% - 20px);
+    top: calc(50% - 20px);
     animation: rotation 60s linear infinite;
     animation-play-state: paused;
 }
 
-@keyframes rotation{
-    from {transform: rotate(-90deg) translateX(60px);}
-    to {transform: rotate(270deg) translateX(60px);}
-}
-
 .buttons{
-    margin-top: 10px;
+    margin-top: 30px;
     display: inline-flex;
 }
 
 .play{
-    height: 10px;
-    border-width: 5px 0 5px 10px;
+    height: 30px;
+    border-width: 15px 0 15px 30px;
     cursor: pointer;
     box-sizing: border-box;
-    margin-left: 15px;
+    margin-left: 50px;
     border-color: transparent transparent transparent #fff;
     transition: 100ms all ease;
     will-change: border-width;
@@ -64,13 +67,17 @@ main{
 
 .running{
     border-style: double;
-    border-width: 0 0 0 10px;
+    border-width: 0 0 0 30px;
 }
 
 .stop{
     background-color: #fff;
-    width: 10px;
-    height: 10px;
+    width: 30px;
+    height: 30px;
     cursor: pointer;
 }
 
+@keyframes rotation{
+    from {transform: rotate(-90deg) translateX(180px);}
+    to {transform: rotate(270deg) translateX(180px);}
+}

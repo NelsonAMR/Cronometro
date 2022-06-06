@@ -42,7 +42,7 @@ const pause = () => {
 }
 
 const stop = () => {
-    secondCircle.style.transform = 'rotate(-90deg) translateX(60px)';
+    secondCircle.style.transform = 'rotate(-90deg) translateX(180px)';
     secondCircle.style.animation = 'none';
     playPauseButton.classList.remove('running');
     runningTime = 0;
